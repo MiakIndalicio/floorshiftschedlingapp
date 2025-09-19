@@ -1,0 +1,103 @@
+html {
+    font-size: 16px;
+}
+
+#header {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#load-unload {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 80%;
+    margin: 0px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    font-size: 1.5rem;
+    padding: 8px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.generator {
+    border: solid 1px black;
+    font-size: 1.5rem;
+    text-align: center;
+};
+
+.edit {
+    border: solid 1px black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.lunch {
+    margin-top: 40px;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+thead.team-name th {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.team-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chore-schedule {
+    margin-top: 40px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.chore-area {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.chores-name {
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+@media print {
+    button {
+        display: none !important;
+    }
+}
