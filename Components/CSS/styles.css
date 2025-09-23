@@ -2,6 +2,12 @@ html {
     font-size: 16px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
 #header {
     font-size: 4rem;
     font-weight: bold;
@@ -48,53 +54,59 @@ button {
     text-align: center;
 }
 
-.lunch {
-    margin-top: 40px;
-    padding: 30px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-thead.team-name th {
+#load-unload th[colspan="7"] {
+    background-color: #eee;
     font-size: 2rem;
+}
+
+/* lunch */
+
+#lunch-table1 {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 60%;
     text-align: center;
+    margin-top: 10px;
+    
 }
 
-.team-a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#lunch-table1 th,
+#lunch-table1 td {
+    border: 1px solid #333;
+    padding: 8px;
 }
 
-.team-b {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#lunch-table1 th[colspan="2"] {
+    background-color: #eee;
+    font-size: 2rem;
 }
 
+/* chores */
 .chore-schedule {
-    margin-top: 40px;
+    margin-top: 5px;
     padding: 30px 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .chore-area {
-    display: flex;
-    flex-direction: column;
-    
-    
+    margin: 0 auto;
 }
 
-.chores-name {
-    display: flex;
-    flex-direction: row;
-    
-    
+.chore-name {
+   margin: 0 auto;
+   gap: 2rem;
 }
+
+#chore-schedule th[colspan='2'] {
+    background-color: #eee;
+    font-size: 2rem;
+}
+
+
 
 @media print {
     button {

@@ -8,6 +8,11 @@
         <div id="table-div">
             <table id="load-unload">
                 <thead>
+                    <tr>
+                        <th colspan="7">1st Shift Floor Schedule</th>
+                    </tr>
+                </thead>
+                <thead>
                     <tr id="table-headers">
                         <th class="employee-id">ID</th>
                         <th class="name">Name</th>
@@ -113,35 +118,43 @@
         
         <div class="lunch">
             <table id="lunch-table1">
-                <thead class="team-name">
-                    <th>Team A</th>
-                </thead>
-                <tablebody>
-                    <tr id="team-a">
-                        <td class="team-a">Claudia</td>
-                        <td class="team-a">Javier</td>
-                        <td class="team-a">Keith</td>
-                        <td class="team-a">Kristy</td>
-                        <td class="team-a">Ryan</td>
-                        <td class="team-a"></td>
+                <thead>
+                    <tr>
+                        <th colspan="2">Lunch</th>
                     </tr>
-                </tablebody>
-            </table>
-
-            <table id="lunch-table2">
-                <thead class="team-name">
-                    <th>Team B</th>
+                    <tr>
+                        <th>Team A</th>
+                        <th>Team B</th>
+                    </tr>
                 </thead>
-                <tr id="team-b">
-                    <td class="team-b">Tiffany</td>
-                    <td class="team-b">Cody</td>
-                    <td class="team-b">Diana</td>
-                    <td class="team-b">Lina</td>
-                    <td class="team-b">Angelo</td>
-                    <td class="team-b"></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="team-a">Claudia</td>
+                        <td class="team-b">Tiffany</td>
+                    </tr>
+                    <tr>
+                        <td class="team-a">Javier</td>
+                        <td class="team-b">Cody</td>
+                    </tr>
+                    <tr>
+                        <td class="team-a">Keith</td>
+                        <td class="team-b">Diana</td>
+                    </tr>
+                    <tr>
+                        <td class="team-a">Kristy</td>
+                        <td class="team-b">Lina</td>
+                    </tr>
+                    <tr>
+                        <td class="team-a">Angelo</td>
+                        <td class="team-b">Ryan</td>
+                    </tr>
+                    <tr>
+                        <td class="team-a">&nbsp;</td>
+                        <td class="team-b">&nbsp;</td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
+         </div>
 
         <div class="button-container">
             <button class="edit-button">Edit</button>
@@ -150,22 +163,42 @@
         <script src="./JS/generator.js"></script>
 
         <div class="chore-schedule">
-            <table id="chore-schedule">
-                <tr id="chore-area">
-                    <td class="chore-area">Bathroom/Banos</td>
-                    <td class="chore-area">Kitchen/Cocina</td>
-                    <td class="chore-area">Sweep</td>
-                    <td class="chore-area">Trash/Basura</td>
-                </tr>
-                <tr id="chores-name">
-                    <td class="chores-name">Mens:
-                        Womens:
-                    </td>
-                    <td class="chores-name"></td>
-                    <td class="chores-name"></td>
-                    <td class="chores-name"></td>
-                </tr>
+            <table id='chore-schedule'>
+                <thead>
+                    <tr>
+                        <th colspan="2">Chores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="chore-area">Bathroom/Banos</td>
+                        <td class="chore-name">
+                            <span>Mens:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span>Womens:</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="chore-area">Kitchen/Cocina</td>
+                        <td class="chore-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="chore-area">Sweep</td>
+                        <td class="chore-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="chore-area">Trash/Basura</td>
+                        <td class="chore-name">
+                            <span>Load:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span>Unload:</span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
+
     </body>
 </html>
