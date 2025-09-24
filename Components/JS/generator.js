@@ -60,7 +60,7 @@ generatorButton.addEventListener('click', () => {
     let slowPeople = [];
     let usedToday = [];
     // collect candidates
-    for (let r = 1; r < table.rows.length; r++) {
+    for (let r = 2; r < table.rows.length; r++) {
       const row = table.rows[r];
       const employeeName = row.cells[1].textContent.trim();
       
