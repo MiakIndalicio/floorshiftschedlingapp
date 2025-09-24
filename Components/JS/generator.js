@@ -53,7 +53,7 @@ generatorButton.addEventListener('click', () => {
   // loop through columns (days)
   for (let c = 2; c <= 6; c++) {
     
-    const dayName = table.rows[0].cells[c].textContent.trim();
+    const dayName = table.rows[1].cells[c].textContent.trim();
     const dayType = daysOfWeek[dayName] || 'normal';
     
     let fastPeople = [];
@@ -97,7 +97,7 @@ generatorButton.addEventListener('click', () => {
         }
 
     // assign Load/Unload/N/A
-    for (let r = 1; r < table.rows.length; r++) {
+    for (let r = 2; r < table.rows.length; r++) {
       const row = table.rows[r];
       const employeeName = row.cells[1].textContent.trim();
 
@@ -118,7 +118,7 @@ generatorButton.addEventListener('click', () => {
 
 
 editButton.addEventListener('click', () => {
-  for (let r=1; r < table.rows.length; r++) {
+  for (let r=2; r < table.rows.length; r++) {
     const row = table.rows[r];
 
     for (let c=1; c <= 6; c++) {
