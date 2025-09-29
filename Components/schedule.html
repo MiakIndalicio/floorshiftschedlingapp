@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <header id="header">Schedule</header>
-        
+    <head>
         <link rel="stylesheet" href="./CSS/styles.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="menu-toggle" onClick="toggleMenu()">☰ Menu</div>
+            <ul id="navbar-links">
+                <li><a href="/.vscode/index.html">Index</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="addEmployee.html">Add/Remove Employees</a></li>
+                <li><a href="employees.html">Employees</a>></li>
+            </ul>
+        </nav>
+        <header id="header">Schedule</header>
 
         <div id="table-div">
             <table id="load-unload">
@@ -160,7 +170,7 @@
             <button class="edit-button">Edit</button>
         </div>
 
-        <script src="./JS/generator.js"></script>
+        <script src="./JS/backUp.js"></script>
 
         <div class="chore-schedule">
             <table id='chore-schedule'>
@@ -198,6 +208,13 @@
                     </tr>
                 </tbody>
             </table>
+             <script>
+                function toggleMenu() {
+                    document.getElementById('navbar-links').classList.toggle('show');
+                }
+            </script>
+            <script src="./JS/storage.js"></script>
+        </div>
         </div>
 
     </body>

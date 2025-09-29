@@ -2,6 +2,50 @@ html {
     font-size: 16px;
 }
 
+/* Navbar */
+.navbar {
+    background-color: #eee;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #eee;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 200px;
+    border-radius: 8 px;
+}
+
+.navbar ul.show {
+    display: flex;
+}
+
+.navbar li {
+    border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    display: black;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+
+/* Table for schedule */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -104,6 +148,46 @@ button {
 #chore-schedule th[colspan='2'] {
     background-color: #eee;
     font-size: 2rem;
+}
+
+/* Add/Remove Employee */
+form {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 400px;
+  background-color: teal; /* light background for contrast */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #004d4d; /* darker teal for text */
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #006666;
 }
 
 

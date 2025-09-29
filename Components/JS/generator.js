@@ -49,11 +49,13 @@ generatorButton.addEventListener('click', () => {
     
     return usedToday;
   };
+
+  //let previousDayUnloaders = [];
   
   // loop through columns (days)
   for (let c = 2; c <= 6; c++) {
     
-    const dayName = table.rows[0].cells[c].textContent.trim();
+    const dayName = table.rows[1].cells[c].textContent.trim();
     const dayType = daysOfWeek[dayName] || 'normal';
     
     let fastPeople = [];
@@ -65,6 +67,7 @@ generatorButton.addEventListener('click', () => {
       const employeeName = row.cells[1].textContent.trim();
       
 
+      
       if (employeeName !== 'N/A' && unloadsPerEmployee[employeeName] < 2) {
         const empObj = employees.find(e => Object.keys(e)[0] === employeeName);
         const employeeSpeed = empObj ? empObj[employeeName] : 'normal'; 
@@ -90,14 +93,14 @@ generatorButton.addEventListener('click', () => {
           usedToday = assignEmployees(2, 1, fastPeople, slowPeople, usedToday);
         }
         else if (dayName === 'Thursday' && dayType === 'slow') {
-          usedToday = assignEmployees(0, 3, fastPeople, slowPeople, usedToday);
+          usedToday = assignEmployees(0, 2, fastPeople, slowPeople, usedToday);
         }
         else if (dayName === 'Friday' && dayType === 'busy') {
-          usedToday = assignEmployees(2, 1, fastPeople, slowPeople, usedToday);
+          usedToday = assignEmployees(1, 2, fastPeople, slowPeople, usedToday);
         }
 
     // assign Load/Unload/N/A
-    for (let r = 1; r < table.rows.length; r++) {
+    for (let r = 2; r < table.rows.length; r++) {
       const row = table.rows[r];
       const employeeName = row.cells[1].textContent.trim();
 
@@ -111,14 +114,17 @@ generatorButton.addEventListener('click', () => {
         row.cells[c].textContent = 'Load';
       }
     }
+    //previousDayUnloaders = [...usedToday];
   }
+
+ 
 
   generatorButton.textContent = 'Generate';
 });
 
 
 editButton.addEventListener('click', () => {
-  for (let r=1; r < table.rows.length; r++) {
+  for (let r=2; r < table.rows.length; r++) {
     const row = table.rows[r];
 
     for (let c=1; c <= 6; c++) {

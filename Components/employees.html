@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./CSS/styles.css">
+        <title>Employee List</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="menu-toggle" onClick="toggleMenu()">☰ Menu</div>
+            <ul id="navbar-links">
+                <li><a href="/.vscode/index.html">Index</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="addEmployee.html">Add/Remove Employees</a></li>
+                <li><a href="employees.html">Employees</a></li>
+            </ul>
+        </nav>
+        <h2>Current Employees</h2>
+        <div id="current-employees">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Speed</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-list-body"></tbody>
+            </table>
+            </div>
+           <script>
+                function toggleMenu() {
+                    document.getElementById('navbar-links').classList.toggle('show');
+                }
+            </script>
+            <script src="./JS/employees.js"></script>
+    </body>
+</html>
